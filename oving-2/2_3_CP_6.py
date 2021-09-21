@@ -1,10 +1,5 @@
 from numpy import *
 
-a = array([[2, -2, -1, -2],[4, 1, -2, 1],[-2, 1, -1, -3]], dtype=float)
-b = array([[1, 2, -1, 2],[0, 3, 1, 4],[2, -1, 1, 2]], dtype=float)
-c = array([[2, 1, -4, -7],[1, -1, 1, -2],[-1, 3, -2, 6]], dtype=float)
-
-
 def naive_gauss_elimination(matrix):
     rows=shape(matrix)[0]
 
@@ -19,6 +14,12 @@ def naive_gauss_elimination(matrix):
 
     print("After Gausselimination:\n", matrix)
 
-naive_gauss_elimination(a)
-naive_gauss_elimination(b)
-naive_gauss_elimination(c)
+
+matrix = array([[2*10**(-20), 1, 1], [1, 2, 4]], dtype=float)
+
+# Example 2.13 version 2 IEEE double precision
+naive_gauss_elimination(matrix)
+
+# Example 2.13 version 3 IEEE double precision, after row exchange
+matrix2 = array([[1, 2, 4], [2*10**(-20), 1, 1]], dtype=float)
+naive_gauss_elimination(matrix2)
