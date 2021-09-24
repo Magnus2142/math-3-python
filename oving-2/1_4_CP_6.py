@@ -30,7 +30,6 @@ for i in range(0, max_iterations):
         print("Breaking after", i, "iterations")
         break
     
-    
 
 print("The approximated root is: ", x_approximate)
 print("f(x_approximate) = ", f(x_approximate))
